@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<script>
+  function f1(){
+    document.getElementById("h1").innerHTML="李政翰 B10609047"
+    document.getElementById("page_p1").innerHTML="一個說認真不認真的學生"
+    document.getElementById("page_p2").innerHTML="喜歡慢跑、睡覺，偶爾寫寫程式"
+    document.getElementById("img").src="me.jpg"
+  }
+  function f2(){
+    document.getElementById("h1").innerHTML="李政翰"
+    document.getElementById("page_p1").innerHTML="國立台灣科技大學 資訊管理系 大學部 二年級"
+    document.getElementById("page_p2").innerHTML=""
+    document.getElementById("img").src="ntust.jpg"
+  }
+  function f3(){
+       document.getElementById("h1").innerHTML=""
+    document.getElementById("page_p1").innerHTML=""
+    document.getElementById("page_p2").innerHTML=""
+    document.getElementById("img").src="life.jpg"
+  }
+
+
+</script>
+</head>
+<body>
+
+<h2>Homework04 2019.03.06</h2>
+<p >Hello! This is my page</p>
+
+
+<header>
+  <h2>Charlie's page</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#"  onclick="f1()">Self introduction</a></li>
+      <li><a href="#"  onclick="f2()">School</a></li>
+      <li><a href="#"  onclick="f3()">Photo</a></li>
+      <li><a href="./Note.html" >On course note</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 id="h1">A student of NTUST</h1>
+    <p id="page_p1"></p>
+    <p id="page_p2"></p>
+    <img id="img" src="https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-0/p206x206/52875354_420611818684166_3787432586884677632_n.jpg?_nc_cat=107&_nc_ht=scontent-hkg3-1.xx&oh=30e2722365e933f745f14d9ddb4975e0&oe=5D15E521" alt="我與唐鳳的合照">
+  </article>
+</section>
+
+<footer>
+  <p><em>By Charlie</em>, a student from <strong>NTUST</strong></p>
+</footer>
+
+</body>
+</html>
+
