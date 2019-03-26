@@ -3,7 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Charlie's class note.</title>
-<link rel="stylesheet" href="frame.css">
+	<link rel="stylesheet" href="frame.css">
+	<script>
+		function alertCourse(){
+			
+			var cs=document.getElementById('course');
+			var v=cs.options[cs.selectedIndex].value;
+			var t=cs.options[cs.selectedIndex].text;
+			getMockTest(v,t);
+		}
+		function getMockTest(v,t){
+			if(v=='algorithmn'){
+				window.open('https://drive.google.com/drive/folders/1hrEwh92r1dREwt6LXkMy1Eo9M8Tb6Vyp?usp=sharing');
+			}else if(v=='se'){
+				alert(t+" is selected but the event has no meaning.");
+			}else if(v=='or'){
+				window.open('https://drive.google.com/drive/folders/1HH6ijSAxalaEkC9qvynHbYCVPZ60j0H2?usp=sharing');
+			}else if(v=='stat'){
+				window.open('https://drive.google.com/drive/folders/1rQKJvIK7QSRVdnujL6VQyHRe6xv-9ESU?usp=sharing');
+			}else if(v=='mis'){
+				alert(t+" is selected but the event has no meaning.");
+			}else if(v=='app'){
+				alert(t+" is selected but the event has no meaning.");
+			}else if(v=='sa'){
+				alert(t+" is selected but the event has no meaning.");
+			} else{
+				alert(t+" is selected but the event has no meaning.");
+			}
+
+			
+		}
+	</script>
 </head>
 <div align="center">
 	<h1>Hello welcome to Charlie's class note</h1>
@@ -16,6 +46,17 @@
 </div>
 <body>
 	<p><strong>format</strong></p>
+	<p style="font-size: 20px;margin-bottom: 0px">My courses</p>
+	<select name="Courses" id="course" >
+		<option value="algorithmn">Algorithmn</option>
+		<option value="stat">Statistics</option>
+		<option value="or">Operation Research</option>
+		<option value="mis">Management Information System</option>
+		<option value="app">Mobile Application Designing</option>
+		<option value="se">Software Engineering</option>
+		<option value="sa" selected="">System Analysis</option>
+	</select>
+	<button onclick="alertCourse()">alert</button>
 	<hr>
 	<table>
 		<tr>
