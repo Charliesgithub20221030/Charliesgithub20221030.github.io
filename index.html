@@ -3,37 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Charlie's class note.</title>
-	<link rel="stylesheet" href="frame.css">
-	<script>
-		function alertCourse(){
-			
-			var cs=document.getElementById('course');
-			var v=cs.options[cs.selectedIndex].value;
-			var t=cs.options[cs.selectedIndex].text;
-			getMockTest(v,t);
-		}
-		function getMockTest(v,t){
-			if(v=='algorithmn'){
-				window.open('https://drive.google.com/drive/folders/1hrEwh92r1dREwt6LXkMy1Eo9M8Tb6Vyp?usp=sharing');
-			}else if(v=='se'){
-				alert(t+" is selected but the event has no meaning.");
-			}else if(v=='or'){
-				window.open('https://drive.google.com/drive/folders/1HH6ijSAxalaEkC9qvynHbYCVPZ60j0H2?usp=sharing');
-			}else if(v=='stat'){
-				window.open('https://drive.google.com/drive/folders/1rQKJvIK7QSRVdnujL6VQyHRe6xv-9ESU?usp=sharing');
-			}else if(v=='mis'){
-				alert(t+" is selected but the event has no meaning.");
-			}else if(v=='app'){
-				alert(t+" is selected but the event has no meaning.");
-			}else if(v=='sa'){
-				alert(t+" is selected but the event has no meaning.");
-			} else{
-				alert(t+" is selected but the event has no meaning.");
-			}
-
-			
-		}
-	</script>
+<link rel="stylesheet" href="frame.css">
 </head>
 <div align="center">
 	<h1>Hello welcome to Charlie's class note</h1>
@@ -46,17 +16,6 @@
 </div>
 <body>
 	<p><strong>format</strong></p>
-	<p style="font-size: 20px;margin-bottom: 0px">My courses</p>
-	<select name="Courses" id="course" >
-		<option value="algorithmn">Algorithmn</option>
-		<option value="stat">Statistics</option>
-		<option value="or">Operation Research</option>
-		<option value="mis">Management Information System</option>
-		<option value="app">Mobile Application Designing</option>
-		<option value="se">Software Engineering</option>
-		<option value="sa" selected="">System Analysis</option>
-	</select>
-	<button onclick="alertCourse()">alert</button>
 	<hr>
 	<table>
 		<tr>
@@ -91,5 +50,7 @@
 
 		</td>
 	</table>
+	<p>This is my school</p>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.600406160485!2d121.53849051507096!3d25.013690583981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2176c4c0ad%3A0x90db5e44ee29f455!2z5ZyL56uL6Ie654Gj56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1554859079141!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </body>
 </html>
