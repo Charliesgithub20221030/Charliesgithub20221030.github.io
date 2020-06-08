@@ -61,6 +61,15 @@
             enable_page_level_ads: true
         });
     </script>
+
+    <!-- Latex CDN -->
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+
     <style type="text/css">
         div.datacamp-exercise {
             margin: 0;
@@ -942,7 +951,7 @@
 
         <div class="container">
             <a class="navbar-brand" href="./index.html">
-                <img src="./assets_files/chalrie_logo.png" style="height: 24px;" alt="Python">
+                <img src="./assets_files/chalrie_logo.png" style="height: 70px;" alt="Python">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -968,11 +977,11 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="more-langs">
 
-                            <a class="dropdown-item disabled" href="./index.html">Home</a>
+                            <a class="dropdown-item" href="./index.html"></a>
 
-                            <a class="dropdown-item" href="./note_statistics.html">Statistics</a>
+                            <a class="dropdown-item disabled" href="./note_statistics.html">Statistics</a>
 
-                            <a class="dropdown-item" href="./note_ai.html">Artificial Intelligence</a>
+                            <a class="dropdown-item" href="./note_ai.html"></a>
 
 
 
@@ -1020,33 +1029,10 @@
         <div class="container">
             <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item"><a class="nav-link" href="./note_statistics.html">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Statistics</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="./note_ai.html">Artificial
                         Intelligence</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </ul>
@@ -1054,24 +1040,6 @@
         </div>
 
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1096,18 +1064,7 @@
                     <p>line2<br></p>
                     <h3>Outline</h3>
                     <ul>
-                        <li><a href="./index.html#subtitle1">scroll
-                                to subtitle1</a></li>
-
-
-
-
-
-
-
-
-
-
+                        <li><a href="#subtitle1">ROC</a></li>
 
                         <li><a href="./index.html#subtitle2">scroll
                                 to subtitle2</a></li>
@@ -1116,10 +1073,34 @@
                         <li><a href="./index.html#subtitle1">scroll
                                 to subtitle1</a></li>
                     </ul>
-                    <h3 id="subtitle1">subtitle1</h3>
+                    <h3 id="subtitle1">ROC</h3>
                     <ul>
-                        <li><a href="https:/www.learnpython.org/en/Numpy_Arrays">Numpy Arrays</a></li>
-                        <li><a href="https:/www.learnpython.org/en/Pandas_Basics">Pandas Basics</a></li>
+                        <p><img src="./images/roc.png" width="400" alt="not found"></p>
+                        <p><b>公式</b></p>
+                        <p>$FPR = \frac{FP}{FP+TN}=\frac{FP}{all\ positive\ examples}$</p>
+                        <p>$TPR = \frac{TP}{TP+FN}=\frac{TP}{all\ negative\ examples}$</p>
+                        <p>Perfect example: 填滿整個方格</p>
+                        <p>如下圖所示</p>
+                        <p><img src="./images/twonormal.png" width="500" alt=""></p>
+                        <p>all <b>positive</b> examples 就是<font color='blue'>藍色</font>的山</p>
+                        <p>all <b>negative</b> examples 就是<font color='green'>綠色</font>的山</p>
+                        <p>ROC 的概念就是從<font color='green'>綠色</font>分布的<b>最右邊</b>開始作為 desicion boundary，<br>
+                            此時，沒有任何 negative example 被誤分成 positive，FPR=0％（即不存在 Type I error）。<br>
+                            然後將 desicion boundary 向左移動，讓 FPR 變大（也就是 Type I error 變大），<br>
+                            並且記錄 TPR 的變化。
+                        </p>
+                        <p>如果兩分布有重疊， 隨著 desicion boundary 的移動，線右邊的 positive example 會愈來愈趨近完全，<br>
+                            TPR 會趨近 100% 。
+                        </p>
+
+                        <p>如果兩分布沒有重疊，仍然是從<font color='green'>綠色</font>分布的<b>最右邊</b>開始作為 desicion boundary，<br>
+                            而 desicion boundary 右邊的 positive example 在一開始就有 100% 樣本，<br>
+                            這種現象從 ROC 曲線上看來，就是在原點的時候，曲線已經達到了最左上角，TPR ＝ 100%，<br>
+                            這種情況被稱為<b>最佳情形</b>，表示在選擇最佳 desicion boundary 的前提下，所使用的<b>特徵</b>能讓兩分布被完整切開。
+                        </p>
+                        <p><img src="images/twonormal_no_overlap.png" width="500" alt=""></p>
+
+                        <p></p>
                     </ul>
                     <h3 id="subtitle2">subtitle2</h3>
                     <ul>
