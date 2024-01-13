@@ -1,0 +1,381 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------------------------------*\
+			 列表共用
+\*------------------------------*/
+ul.list {
+	padding: 20px 20px 0px 20px;
+	margin: 0;
+	list-style: none;
+}
+ul.list li {
+	display: table;
+	width: 100%;
+	margin: 0px 0px 20px;
+	padding: 0px;
+	border-bottom: 1px solid #ddd;
+}
+ul.list li a.ph {
+	display: inline-block;
+	vertical-align: top;
+	width: 160px;
+	height: 100px;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	line-height: 0;
+	opacity: 1;
+}
+ul.list li a.ph img /*縮圖*/{
+	width: 100%;
+	line-height: 0;
+}
+ul.list li a.tit {
+	width: calc(100% - 175px);
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 15px;
+	color: #111;
+}
+ul.list li a.tit span.time {
+	display: block;
+	height: 20px;
+	font-size: 15px;
+	color: #816a3e;
+	padding: 0px 0px 5px;
+	line-height: 1;
+}
+ul.list li a.tit h3.title {
+    font-family: Arial, helvetica, "微軟正黑體", Geneva, "Heiti TC", "新細明體", sans-serif;
+    font-weight:normal;
+	font-size: 20px;
+    display: inline-block;
+}
+ul.list li a.tit span.video {
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	margin: 0 6px;
+    background: url('../images/video.svg') no-repeat center;
+    background-size:25px auto;
+    background-position-y: -1px;
+}
+ul.list li:hover {
+	background-color: #f7f7f7;
+}
+ul.list li a.ph:hover {
+	opacity: 0.9;
+	transition: opacity 0.2s linear;
+}
+ul.list li:last-child {
+	margin: 0px 0px 0px;
+}
+
+@media screen and (max-width:500px) {
+	ul.list li a.tit {
+		width: 60%;
+		padding: 0px 10px;
+	}
+	ul.list li a.ph {
+		width: 40%;
+		height: 0;
+		padding: 0 0 26% 0;
+		overflow: hidden;
+	}
+}
+
+/*------------------------------*\
+		  地方新聞 分類
+\*------------------------------*/
+.newsSort2 {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 10px 20px 20px;
+	background-color: #dbe0e2;
+	text-align: center;
+	line-height: 29px;
+	overflow: hidden;
+}
+.newsSort2 .area {
+	display: flex;
+	flex-wrap: wrap;
+}
+.newsSort2 .area a {
+	border-bottom: 1px solid #fff;
+	flex: 0 0 9%;
+	padding: 0 6px;
+	color: #111;
+	line-height: 45px;
+	letter-spacing: 1px;
+}
+.newsSort2 .area a:hover {
+	color: #c00;
+}
+
+@media screen and (min-width:801px) {
+    /*行動裝置版 隱藏*/
+	.newsSort2_m {
+		display: none;
+	}
+}
+@media screen and (max-width:800px) {
+    /*電腦版 隱藏*/
+	.newsSort2 {
+		display: none;
+	}
+    /*行動裝置版*/
+	.newsSort2_m {
+		width: 100%;
+		background: #dbe0e2;
+	}
+	.newsSort2_m li {
+		text-align: center;
+		width: 100%;
+		padding: 14px 0;
+	}
+	.newsSort2_m li.local select {
+		width: 50%;
+		height: 30px;
+		font-size: 16px;
+		font-family: "黑體", "微軟正黑體", "新細明體", Arial, sans-serif;
+		border: 1px solid #999;
+		background: url(../images/arrow.png) no-repeat right center #fff;
+		background-size: 1rem;
+		padding: 0px 10px;
+		-webkit-appearance: none;
+		/*Chrome*/
+		-moz-appearance: none;
+		/*FF*/
+		appearance: none;
+		/*CSS3*/
+	}
+	.newsSort2_m li.local select::-ms-expand {
+		display: none;
+		/*IE*/
+	}
+}
+
+/*------------------------------*\
+		    關鍵字列表
+\*------------------------------*/
+/* 查詢條件用 */
+/*.searchbox {
+	width: 100%;
+	margin: 0;
+	padding: 20px 50px;
+	background-color: #dbe0e2;
+	overflow: hidden;
+	color: #444;
+	font-size: 20px;
+}
+.searchbox div {
+	padding: 25px 5px;
+	vertical-align: middle;
+	line-height: 20px;
+	text-align: center;
+}
+.searchbox div:first-child {
+	border-bottom: 1px solid #fff;
+}
+.searchbox div input[type="text"] {
+	width: 300px;
+	height: 30px;
+	font-size: 18px;
+}
+.searchbox div input[type="radio"] {
+	margin: 8px 8px 8px 0px;
+}
+.searchbox div label {
+	margin: 0px 5px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+.searchbox span {
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 5px;
+	vertical-align: middle;
+}
+.searchbox input[type="button"] {
+	font-size: 18px;
+	font-family: "微軟正黑體";
+	color: #fff;
+	letter-spacing: 5px;
+	background-color: #e8ae2b;
+	padding: 6px 25px 6px 30px;
+	margin: 10px 0;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	float: right;
+	border: 1px solid #e8ae2b;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.searchbox input[type="button"]:hover {
+	background-color: #f2f2f2;
+	color: #222;
+	border: 1px solid #ccc;
+	letter-spacing: 5px;
+}*/
+/* 時間查詢 下拉式選單 */
+/*.searchbox .interval select {
+	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid #aaa;
+	height: 28px;
+	min-width: 60px;
+	margin: 0px 6px;
+	padding: 0px 5px;
+	font-size: 16px;
+}*/
+/*IE*/
+/*.searchbox .interval select::-ms-expand {
+	display: none;
+}*/
+/*.searchbox .interval select.month,
+.searchbox .interval select.day {
+	width: 55px;
+	background: url(../images/arrow.png) no-repeat 40px 5px #fff;
+	background-size: 15px;
+}
+.searchbox .interval select.year {
+	width: 80px;
+	background: url(../images/arrow.png) no-repeat 60px 5px #fff;
+	background-size: 15px;
+}
+@media screen and (min-width:1101px) {
+	.searchbox div:first-child {
+		max-width: 726px;
+		margin: 0 auto;
+	}
+	.searchbox div input[type="text"] {
+		width: calc(100% - 417px);
+	}
+	.searchbox .interval {
+		max-width: 738px;
+		margin: 0 auto;
+	}
+	.searchbox .interval p {
+		margin-top: 10px;
+	}
+	.searchbox .interval input.datepicker {
+		width: calc(51% - 24px);
+		height: 30px;
+		font-size: 18px;
+		padding: 0 5px;
+		border: 1px solid #a9a9a9;
+	}
+	.ui-widget-content {
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7)!important;
+	}
+}
+@media screen and (max-width:1100px) {
+	.searchbox {
+		display: none;
+	}
+}
+@media screen and (max-width:960px) {
+	.searchbox{
+		width: 96%;
+		margin: 0px auto;
+	}
+}
+@media screen and (max-width:500px) {
+	.searchbox {
+		display: none;
+	}
+}*/
+
+/* 無圖列表 */
+ul.searchlist {
+	padding: 20px 20px 0px 20px;
+	margin: 0;
+	list-style: none;
+}
+ul.searchlist li {
+	width: 100%;
+	margin: 0px 0px 15px;
+	padding: 0 20px 15px;
+	min-height: 100px;
+	display: block;
+	border-bottom: 1px solid #ddd;
+	vertical-align: top;
+}
+ul.searchlist li:hover {
+	background-color: #f7f7f7;
+}
+ul.searchlist li a.tit {
+	display: block;
+	margin: 5px 0;
+}
+ul.searchlist li a.tit h3{
+    font-family: Arial, helvetica, "微軟正黑體", Geneva, "Heiti TC", "新細明體", sans-serif;
+    font-weight:normal;
+	font-size: 20px;
+	color: #222;
+}
+ul.searchlist li a.tit strong /*關鍵字粗體*/{
+	font-size: 20px;
+	background-color: #ff9;
+	font-weight: normal;
+}
+ul.searchlist li span {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 15px;
+	color: #816a3e;
+	margin: 0px;
+}
+ul.searchlist li a.tit p span.video {
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	padding: 0;
+	margin: 0 6px;
+}
+ul.searchlist li a.tit p span.video img {
+	width: 25px;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+ul.searchlist li p {
+	font-size: 16px;
+	color: #777;
+	line-height: 1.7;
+}
+ul.searchlist li p strong /*關鍵字粗體*/{
+	background-color: #ff9;
+	font-weight: normal;
+}
+
+/*引言+關鍵字*/
+/*ul.searchlist li .immtag {
+	display: inline-block;
+	margin-right: 5px;
+}*/
+
+@media screen and (max-width:500px) {
+	ul.searchlist {
+		padding: 15px 15px 0px;
+	}
+	ul.searchlist li {
+		margin: 0px 0px 10px;
+		padding: 0px 0px 10px;
+		min-height: initial;
+	}
+	ul.searchlist li p {
+		display: none;
+	}
+	.searchlist #ad-B1,
+    .searchlist #ad-B2,
+    .searchlist #ad-B3,
+    .searchlist #ad-B4 {
+		margin: 0px auto 10px;
+		padding: 0px 0px 10px;
+	}
+}

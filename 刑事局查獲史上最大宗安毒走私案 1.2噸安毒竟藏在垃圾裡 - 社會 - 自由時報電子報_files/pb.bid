@@ -1,0 +1,46 @@
+// AdserverX
+var adxTag = window.adxTag || {};
+adxTag.cmd = adxTag.cmd || [];
+adxTag.data = adxTag.data || {};
+
+window.googletag = window.googletag || {};
+window.googletag.cmd = window.googletag.cmd || [];
+
+(function () {
+    adxTag.data.zones = adxTag.data.zones || {};
+    adxTag.data.zones["WhItW9Op"] = {
+        bidObjId: "",
+        creative: "\"\""
+    }
+    adxTag.data.zones["WhzQmzOp"] = {
+        bidObjId: "",
+        creative: "\"<script src='https://www.googletagservices.com/tag/js/gpt.js'>  googletag.pubads().definePassback('/21202031/PASSBACK-mobile-IR2-appier', [[336, 280], 'fluid', [1, 1], [300, 250]]).display();<\\\/script>\""
+    }
+    adxTag.data.zones["WhI5mzOp"] = {
+        bidObjId: "",
+        creative: "\"\""
+    }
+    adxTag.data.zones["mhMi9ro1"] = {
+        bidObjId: "",
+        creative: "\"<div data-glade data-ad-unit-path=\\\"/21202031/PASSBACK-mobile-H1-appier\\\" height=\\\"480\\\" width=\\\"320\\\"><\\\/div><script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'><\\\/script>\""
+    }
+    adxTag.data.zones["WhzQm9Op"] = {
+        bidObjId: "",
+        creative: "\"<script>parent.appier_callback('apxzone_WhzQm9Op');<\\\/script>\""
+    }
+    adxTag.data.zones["WtAF930Q"] = {
+        bidObjId: "",
+        creative: "\"<script src='https://www.googletagservices.com/tag/js/gpt.js'> googletag.pubads().definePassback('/21202031/PASSBACK-BD1-appier', [[300, 250], [300, 600]]).display(); <\\\/script>\""
+    }
+    adxTag.data.zones["WhueW9Op"] = {
+        bidObjId: "",
+        creative: "\"<script>parent.appier_callback('apxzone_WhueW9Op');<\\\/script>\""
+    }
+    adxTag.data.zones["HtuJ9M-Q"] = {
+        bidObjId: "",
+        creative: "\"<div data-glade data-ad-unit-path=\\\"/21202031/PASSBACK-mobile-I1-bottom-appier\\\" height=\\\"50\\\" width=\\\"320\\\"><\\\/div> <script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'><\\\/script>\""
+    }
+    window.googletag.cmd.push(function () {
+        var pubads = window.googletag.pubads();
+    })
+})();

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown page</title>
+    <script src="modules/markdown-browser-0.6.0-beta1/markdown.js"></script>
+
+</head>
+
+<body>
+    <h1>hello this is a markdown test page</h1>
+    <p id="markdown_block">hhhh</p>
+</body>
+<script>
+    function readMarkdownFile(fn) {
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", fn, true);
+        return xmlHttp.send();
+    }
+
+
+    md_content = readMarkdownFile('js.md');
+    alert(md_content);
+    html_content = markdown.toHTML(md_content);
+    d = document.getElementById('markdown_block');
+    d.innerHTML = html_content;
+</script>
+
+</html>

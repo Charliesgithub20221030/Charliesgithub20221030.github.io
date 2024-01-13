@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+aside {
+	width: 300px;
+	float: right;
+	margin: 0px 0px 30px;
+}
+aside .bg {
+	width: 100%;
+	background: #fff;
+	margin-bottom: 20px;
+	box-shadow: 0px 1px 5px #ddd;
+	overflow: hidden;
+}
+aside #right_blake {
+	width: 300px;
+}
+aside .caption_right {
+    font-family: 'Noto Sans TC', "微軟正黑體";
+	font-size: 20px;
+	color: #111;
+	font-weight: bold;
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 3px;
+}
+
+/* 日期 */
+.date {
+	width: 300px;
+	height: 46px;
+	font-size: 14px;
+	color: #555;
+	text-align: center;
+	line-height: 46px;
+}
+
+/* 熱門新聞 */
+.hotnews {
+	padding: 15px 15px 8px 15px;
+	counter-reset: num;
+}
+.hotnews a {
+	display: block;
+	font-size: 16px;
+	margin: 12px 0;
+	padding: 0px 0px 0px 35px;
+	position: relative;
+}
+.hotnews a:before {
+	content: counter(num) '. ';
+	counter-increment: num;
+	position: absolute;
+	left: 0;
+	top: 6px;
+	font-size: 25px;
+	color: #e8ae2b;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial;
+}
+
+/* 熱門新訊+FB */
+.market300 .caption_right {
+	background: #e8ae2b;
+	padding: 10px;
+    border-bottom:none;
+}
+.market300 .caption_right b {
+	font-size: 20px;
+	color: #fff;
+}
+.market300 .caption_right .triangle {
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	-webkit-clip-path: polygon(0 0, 0% 100%, 60% 50%);
+	clip-path: polygon(0 0, 0% 100%, 60% 50%);
+	margin: 6px 0;
+	float: right;
+}
+.market300 ul {
+	padding: 0 0 10px 0;
+}
+.market300 ul li {
+	font-size: 16px;
+	line-height: 1.5;
+	padding: 10px 10px 10px 25px;
+	border-bottom: 1px solid #bbb;
+	position: relative;
+}
+.market300 ul li:last-of-type {
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+.market300 ul li:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 13px;
+	left: 11px;
+	width: 5px;
+	height: 14px;
+	background: #e8ae2b;
+}
+.fb-like-box {
+	margin-bottom: 20px;
+	box-shadow: 0px 1px 5px #ddd;
+}
+#fb-root {
+	display: none;
+}
+.fb-comments,
+.fb-comments iframe[style] {
+	width: 100% !important;
+}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+	width: 100% !important;
+}
+
+/* 熱門關鍵字雲 */
+.hot_tag {
+	padding: 10px 10px 7px 10px;
+	width: 300px;
+	min-height: 250px;
+}
+.hot_tag .caption_right {
+	border-bottom: 1px solid #bbb;
+}
+
+@media screen and (max-width:1100px) {
+	aside {
+		display: none;
+	}
+}
